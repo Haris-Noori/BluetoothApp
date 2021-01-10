@@ -45,22 +45,18 @@ public class MainActivity extends AppCompatActivity {
         mBlueAdapter = BluetoothAdapter.getDefaultAdapter();
 
         // Check if bluetooth is available or not
-        if(mBlueAdapter == null )
-        {
+        if(mBlueAdapter == null ) {
             mStatusBlueTv.setText("Bluetooth is not available");
         }
-        else
-        {
+        else {
             mStatusBlueTv.setText("Bluetooth is available");
         }
 
         // Set Image according to bluetooth status(on/off)
-        if(mBlueAdapter.isEnabled())
-        {
+        if(mBlueAdapter.isEnabled()) {
             mBlueTv.setImageResource(R.drawable.ic_bluetooth_on);
         }
-        else
-        {
+        else{
             mBlueTv.setImageResource(R.drawable.ic_bluetooth_off);
         }
 
